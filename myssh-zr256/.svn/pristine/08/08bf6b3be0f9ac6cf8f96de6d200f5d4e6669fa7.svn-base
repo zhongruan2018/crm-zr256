@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.multipart.maxSize" value="200000000"/>
+	<constant name="struts.action.extension" value="action"/>
+	<constant name="struts.custom.i18n.resources" value="message"/>
+
+	<package name="default" extends="struts-default" namespace="/">
+		<!-- struts2与spring进行无缝整合，需要class与spring中的bean的id一致 -->
+		<action name="*Dept" class="deptAction" method="{1}">
+			<result>/WEB-INF/jsp/{1}.jsp</result>
+		</action>
+	</package>
+
+</struts>    

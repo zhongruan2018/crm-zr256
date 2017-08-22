@@ -1,0 +1,9 @@
+db.driverClassName=oracle.jdbc.OracleDriver
+db.url=jdbc:oracle:thin:@localhost:1521:orcl
+db.username=scott
+db.password=tiger
+db.maxWait=10000
+db.initialSize=30
+db.maxActive=100
+db.maxIdle=100
+db.minIdle=30
